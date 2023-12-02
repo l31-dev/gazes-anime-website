@@ -19,7 +19,9 @@ jobs:
           pnpm install
           pnpm run build
 
-      - name: Create bin branch
+      - name: Remove all except 'bin'
         run: |
           find . -mindepth 1 -maxdepth 1 ! -name 'bin' -exec rm -rf {} \;
-          ls
+
+      - name: List remaining files
+        run: ls -la
