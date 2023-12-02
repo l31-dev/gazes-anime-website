@@ -23,7 +23,7 @@ jobs:
         run: ls -la
 
       - name: Delete all files except the bin directory
-        run: rm -r $(ls -A | grep -v bin)
+        run: rm -r $(ls -A | grep -v dist)
 
       - name: List remaining files
         run: ls -la
