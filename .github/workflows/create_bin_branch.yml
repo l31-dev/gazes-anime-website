@@ -3,7 +3,7 @@ name: Create Bin Branch
 on:
   push:
     branches:
-      - main  # Replace with your main branch name
+      - master  # Replace with your main branch name
 
 jobs:
   build:
