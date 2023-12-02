@@ -26,4 +26,11 @@ jobs:
         run: rm -r $(ls -A | grep -v dist)
 
       - name: List remaining files
-        run: ls -la
+        run: mv dist/* .
+
+      - name: Create a branch with the dir
+        run: |
+          git checkout prod
+          git add .
+          git commit -m "pushing in prod"
+          git push
