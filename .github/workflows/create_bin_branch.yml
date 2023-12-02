@@ -19,10 +19,5 @@ jobs:
           pnpm install
           pnpm run build
 
-      - name: Remove all except 'bin'
-        run: |
-          shopt -s extglob  # Enable extended pattern matching
-          rm -rf !(bin)/*
-
       - name: List remaining files
         run: ls -la
