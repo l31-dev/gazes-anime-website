@@ -3,7 +3,7 @@ name: Create Bin Branch
 on:
   push:
     branches:
-      - master
+      - master  # Replace with your main branch name
 
 jobs:
   build:
@@ -13,35 +13,28 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Install pnpm
-        run: npm i -g pnpm
-
-      - name: Install dependencies
-        run: pnpm install
-
       - name: Build project
-        run: pnpm run build
+        run: |
+          npm i -g pnpm
+          pnpm install
+          pnpm run build
 
       - name: List remaining files
         run: ls -la
 
-      - name: Move build artifacts to bin directory
-        run: mv dist/* bin/
+      - name: Delete all files except the bin directory
+        run: rm -r $(ls -A | grep -vE '^(.git|dist)$')
+
+      - name: List remaining files
+        run: mv dist/* .
 
       - name: Set up Git
         run: |
           git config --global user.email "action@github.com"
           git config --global user.name "github"
 
-      - name: Create prod branch if it doesn't exist
+      - name: Create a branch with the dir
         run: |
-          git checkout -B prod
-
-      - name: Add changes to git
-        run: git add .
-
-      - name: Commit changes
-        run: git commit -m "Push build artifacts to prod branch"
-
-      - name: Push changes to prod branch
-        run: git push origin prod
+          git add .
+          git commit -m "pushing to prod"
+          git push origin prod
