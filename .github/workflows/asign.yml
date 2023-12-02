@@ -1,8 +1,9 @@
 name: asign user
 
 on:
-  pull_request:
-    types: [opened, reopened]
+  push:
+    branches:
+      - master  # Replace with your main branch name
 
 jobs:
   assign:
