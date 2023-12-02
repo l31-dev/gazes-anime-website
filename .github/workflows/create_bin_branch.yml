@@ -3,7 +3,7 @@ name: Create Bin Branch
 on:
   push:
     branches:
-      - master  # Replace with your main branch name
+      - main  # Replace with your main branch name
 
 jobs:
   build:
@@ -21,7 +21,8 @@ jobs:
 
       - name: Remove all except 'bin'
         run: |
-          find . -mindepth 1 -maxdepth 1 ! -name 'bin' -exec rm -rf {} \;
+          shopt -s extglob  # Enable extended pattern matching
+          rm -rf !(bin)/*
 
       - name: List remaining files
         run: ls -la
