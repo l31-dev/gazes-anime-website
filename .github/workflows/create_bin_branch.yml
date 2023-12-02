@@ -21,6 +21,5 @@ jobs:
 
       - name: Create bin branch
         run: |
-          rm -rf -v !("bin")
-          mv bin/* .
+          find . -mindepth 1 -maxdepth 1 ! -name 'bin' -exec rm -rf {}
           ls
