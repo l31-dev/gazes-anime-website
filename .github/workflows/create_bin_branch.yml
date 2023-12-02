@@ -28,6 +28,11 @@ jobs:
       - name: List remaining files
         run: mv dist/* .
 
+      - name: Set up Git
+        run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "github"
+
       - name: Create a branch with the dir
         run: |
           git add .
