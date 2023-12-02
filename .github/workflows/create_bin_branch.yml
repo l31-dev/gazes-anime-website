@@ -30,7 +30,6 @@ jobs:
 
       - name: Create a branch with the dir
         run: |
-          git checkout prod
           git add .
-          git commit -m "pushing in prod"
-          git push
+          git commit -m "pushing to prod"
+          git push origin prod
