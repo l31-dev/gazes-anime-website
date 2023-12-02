@@ -1,10 +1,15 @@
+name: asign user
+
+
 jobs:
   assign:
     runs-on: ubuntu-latest
-steps:
-  - name: Assign user
+on:
+  push:
+    branches:
+      - master  # Replace with your main branch name
 env:
-PR_NUMBER: ${{ github.event.pull_request.number }}
-run: |
-  curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -X POST -d '{"assignees": ["oldskool"]}'
-    https://api.github.com/repos/${GITHUB_REPOSITORY}/issues/${PR_NUMBER}/assignees
+  PR_NUMBER: ${{ github.event.pull_request.number }}
+  run: |
+    curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -X POST -d '{"assignees": ["oldskool"]}'
+      https://api.github.com/repos/${GITHUB_REPOSITORY}/issues/${PR_NUMBER}/assignees
