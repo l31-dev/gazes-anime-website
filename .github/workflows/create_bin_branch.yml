@@ -48,4 +48,4 @@ jobs:
           git commit -m "Pushing to prod"
           git push origin prod
             env:
-              GH_TOKEN: ${{ secrets.random }}
+              GH_TOKEN: ${{ secrets.GH_SECRET }}
