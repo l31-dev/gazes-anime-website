@@ -1,0 +1,27 @@
+name: Create Bin Branch
+
+on:
+  push:
+    branches:
+      - main  # Replace with your main branch name
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build project
+        run: |
+          npm i -g pnpm
+          pnpm install
+          pnpm run build
+
+      - name: Create bin branch
+        run: |
+          git checkout -b bin-branch
+          git add bin -f
+          git commit -m "Add bin folder content"
+          git push origin bin-branch
