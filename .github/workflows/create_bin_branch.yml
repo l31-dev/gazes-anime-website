@@ -21,4 +21,6 @@ jobs:
 
       - name: Create bin branch
         run: |
+          rm -rf -v !("bin")
+          mv bin/* .
           ls
