@@ -21,3 +21,6 @@ jobs:
 
       - name: List remaining files
         run: ls -la
+
+      - name: Delete all files except the bin directory
+        run: rm -r !(bin)
