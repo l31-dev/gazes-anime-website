@@ -1,0 +1,68 @@
+{
+  "node_modules/.pnpm/remixicon@3.6.0/node_modules/remixicon/fonts/remixicon.eot": {
+    "file": "assets/remixicon-cfa5cab4.eot",
+    "src": "node_modules/.pnpm/remixicon@3.6.0/node_modules/remixicon/fonts/remixicon.eot"
+  },
+  "node_modules/.pnpm/remixicon@3.6.0/node_modules/remixicon/fonts/remixicon.svg": {
+    "file": "assets/remixicon-66a7302f.svg",
+    "src": "node_modules/.pnpm/remixicon@3.6.0/node_modules/remixicon/fonts/remixicon.svg"
+  },
+  "node_modules/.pnpm/remixicon@3.6.0/node_modules/remixicon/fonts/remixicon.ttf": {
+    "file": "assets/remixicon-a9482549.ttf",
+    "src": "node_modules/.pnpm/remixicon@3.6.0/node_modules/remixicon/fonts/remixicon.ttf"
+  },
+  "node_modules/.pnpm/remixicon@3.6.0/node_modules/remixicon/fonts/remixicon.woff": {
+    "file": "assets/remixicon-ceb8ab1c.woff",
+    "src": "node_modules/.pnpm/remixicon@3.6.0/node_modules/remixicon/fonts/remixicon.woff"
+  },
+  "node_modules/.pnpm/remixicon@3.6.0/node_modules/remixicon/fonts/remixicon.woff2": {
+    "file": "assets/remixicon-79771837.woff2",
+    "src": "node_modules/.pnpm/remixicon@3.6.0/node_modules/remixicon/fonts/remixicon.woff2"
+  },
+  "src/entry-client.css": {
+    "file": "assets/entry-client-c71d5e86.css",
+    "src": "src/entry-client.css"
+  },
+  "src/entry-client.tsx": {
+    "assets": [
+      "assets/remixicon-cfa5cab4.eot",
+      "assets/remixicon-79771837.woff2",
+      "assets/remixicon-ceb8ab1c.woff",
+      "assets/remixicon-a9482549.ttf",
+      "assets/remixicon-66a7302f.svg"
+    ],
+    "css": [
+      "assets/entry-client-c71d5e86.css"
+    ],
+    "dynamicImports": [
+      "src/routes/[...404].tsx",
+      "src/routes/index.tsx"
+    ],
+    "file": "assets/entry-client-92aaf2d8.js",
+    "isEntry": true,
+    "src": "src/entry-client.tsx"
+  },
+  "src/routes/[...404].tsx": {
+    "file": "assets/_...404_-0f353530.js",
+    "imports": [
+      "src/entry-client.tsx"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/routes/[...404].tsx"
+  },
+  "src/routes/index.css": {
+    "file": "assets/index-ce347705.css",
+    "src": "src/routes/index.css"
+  },
+  "src/routes/index.tsx": {
+    "css": [
+      "assets/index-ce347705.css"
+    ],
+    "file": "assets/index-54703a36.js",
+    "imports": [
+      "src/entry-client.tsx"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/routes/index.tsx"
+  }
+}
