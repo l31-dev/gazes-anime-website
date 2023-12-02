@@ -21,7 +21,4 @@ jobs:
 
       - name: Create bin branch
         run: |
-          git checkout -b bin-branch
-          git add bin -f
-          git commit -m "Add bin folder content"
-          git push origin bin-branch
+          ls
