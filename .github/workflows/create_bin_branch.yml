@@ -47,3 +47,5 @@ jobs:
           git add .
           git commit -m "Pushing to prod"
           git push origin prod
+            env:
+              GH_TOKEN: ${{ secrets.random }}
